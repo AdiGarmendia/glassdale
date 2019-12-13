@@ -1,4 +1,4 @@
-import { useCriminals } from "./CriminalProvider.js";
+import { useCriminals, getCriminals } from "./CriminalProvider.js";
 import CriminalComponent from "./Criminal.js";
 
 const eventHub = document.querySelector(".container");
@@ -27,6 +27,38 @@ export const CriminalList = () => {
       else {render(matchingCriminals)};
     }
   });
+  
+  eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "showCriminals") {
+      const showCriminals = new CustomEvent("showCriminalsButtonClicked")
+      eventHub.dispatchEvent(showCriminals)
+    }
+  })
+
+  eventHub.addEventListener("showCriminalsButtonClicked", event => {
+    console.log("button clicked for Criminals")
+    render(criminalCollection)
+  })
+
+  // custom event for showing alibies
+  eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("associates--")) {
+
+        const [prefix, id] = clickEvent.target.id.split("--")
+
+        const message = new CustomEvent("associateButtonClicked", {
+            detail: {
+                criminalId: id
+            }
+        })
+        eventHub.dispatchEvent(message)
+    }
+    else if (clickEvent.target.id.startsWith("closeDialog")) {
+      const dialogElement = clickEvent.target.parentNode 
+      dialogElement.close()
+      
+    }
+})
 
   let render = criminalCollection => {
     contentElement.innerHTML = ""
