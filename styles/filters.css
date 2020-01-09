@@ -1,0 +1,9 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.filter {
+  margin-right: 1em;
+}

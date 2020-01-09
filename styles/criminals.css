@@ -1,0 +1,17 @@
+.criminals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.criminal {
+  flex-basis: 21%;
+  border: 1px dotted gray;
+  padding: 1em;
+  margin: 1em;
+}
+
+.criminal__header {
+  font-size: 1.25em;
+  padding-bottom: 0.5em;
+}

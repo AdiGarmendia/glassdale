@@ -1,8 +1,14 @@
+@import './criminals.css';
+@import './filters.css';
+@import './notes.css';
+
 body {
-  background-color: #D8DBE2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #D8DBE2;
+
 }
 
-.flex__Here {
+/* .flex__Here {
   display: flex;
   justify-content: space-between;
 }
@@ -29,8 +35,8 @@ body {
   /* border-radius: 12px; */
   /* box-shadow: 4px 8px 16px 0 #58A4B0; */
 
-}
 
+/* 
 footer {
   background-color: #A9BCD0;
 
@@ -59,7 +65,6 @@ footer {
 
 .criminal {
   flex-basis: 20%;
-  /* border-radius: 12px; */
   padding: 1px;
   margin: 8px;
   background-color: #A9BCD0;
@@ -84,7 +89,6 @@ footer {
   font-weight: bolder;
   color: #373F51;
   text-shadow: -.25px .25px #D8DBE2, .25px -.25px #D8DBE2, -.25px .25px #D8DBE2, .25px -.25px #D8DBE2;
-  /* box-shadow: 4px 8px 16px 0 #58A4B0; */
   background-color: #A9BCD0;
 
 }
@@ -103,7 +107,6 @@ footer {
 
 button {
   max-width: 100px;
-  /* background-color: #58A4B0; */
   border: black;
   border-radius: 12px;
   margin: 8px;
@@ -143,4 +146,4 @@ button:hover {
   background-color: #A9BCD0;
   justify-content: space-evenly;
   box-shadow: 0 4px 8px 0 #58A4B0;
-}
+} */

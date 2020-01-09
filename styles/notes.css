@@ -1,0 +1,21 @@
+.noteFormContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.note__field {
+  flex-basis: 20%;
+}
+
+.notesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.note {
+  flex-basis: 22%;
+  border: 1px dashed darkgoldenrod;
+  padding: 0.75em;
+}
